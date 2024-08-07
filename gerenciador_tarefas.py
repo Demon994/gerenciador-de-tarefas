@@ -112,7 +112,7 @@ def menu_visualizar():
     escolha = pegar_opcao()
     limpar_terminal()
     if escolha == 4:
-        return False  # Indica que o usuário deseja voltar ao menu principal
+        return False
     elif escolha in [1, 2, 3]:
         logo()
         filtro = None
@@ -125,19 +125,19 @@ def menu_visualizar():
         escolha = pegar_opcao()
         if escolha == 1:
             limpar_terminal()
-            return True  # Continua no menu de visualização
+            return True  
         elif escolha == 2:
-            return False  # Volta ao menu inicial
+            return False 
         else:
             print(Fore.RED + 'Opção inválida. Tente novamente.')
             time.sleep(2)
             limpar_terminal()
-            return True  # Continua no menu de visualização
+            return True 
     else:
         print(Fore.RED + 'Opção inválida. Tente novamente.')
         time.sleep(2)
         limpar_terminal()
-        return True  # Continua no menu de visualização
+        return True
 
 def menu_cadastro():
     logo()
@@ -177,7 +177,7 @@ def iniciar_programa():
         elif escolha == 1:
             menu_cadastro()
         elif escolha == 2:
-            while menu_visualizar():  # Continua no menu de visualização se retornar True
+            while menu_visualizar(): 
                 pass
         elif escolha == 3:
             while True:
