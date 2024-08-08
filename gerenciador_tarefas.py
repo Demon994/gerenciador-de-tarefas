@@ -45,26 +45,6 @@ def pegar_opcao():
         except ValueError:
             print('Erro, digite apenas o número que representa a sua escolha!')
 
-# Funções principais
-def porcentagem_no_terminal(valor):
-    def get_color(porcentagem):
-        if porcentagem < 50:
-            return Fore.RED
-        elif porcentagem < 80:
-            return Fore.YELLOW
-        else:
-            return Fore.GREEN
-
-    frase_lista = [' '] * valor
-    for contador in range(valor):
-        porcentagem = (contador / valor) * 100
-        color = get_color(porcentagem)
-        print(color + ''.join(frase_lista), f'{porcentagem:.0f}%' + Style.RESET_ALL)
-        frase_lista[contador] = '|'
-        time.sleep(0.1)
-        limpar_terminal()
-
-    print(color + ''.join(frase_lista), f'{porcentagem:.0f}%' + Style.RESET_ALL)
 
 def logo():
     cian = Fore.CYAN
